@@ -10,7 +10,10 @@
 #Make sure you include all the included files with the installer
 #Also change the settings to suit your preferences
 #
-#The script kinda messes up the putty terminal layout so you'll probably have to start a new seession after your run this
+#The script can mess up the putty terminal layout so you'll probably have to start a new session after your run this
+#EDIT: I was not able to reproduce this issue and will not be looking into it any further as it does not affect usability
+
+######VARIABLES######
 
 #General Info
 HDD_loc="/media/Seagate Expansion Drive/" #"~/" is the normal install path (set this to the path you want syncthing data stored, probably a usb HDD)
@@ -24,6 +27,10 @@ g_domain="subdomain.yourdomain.com"
 #Duckdns login info
 duck_token="yourduckdnstoken" #you can find your token in the instalation instructions for duckdns
 duck_domain="your duckdns subdomain" #.duckdns.org
+
+
+
+######CODE######
 
 if [ "$EUID" = 0 ]; then
     echo "Please do not run as root"
